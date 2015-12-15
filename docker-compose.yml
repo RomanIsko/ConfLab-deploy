@@ -3,13 +3,11 @@ web:
   volumes:
    - .:/app
   ports:
-   - 8080:8080
+   - 8888:8080
   links:
    - db
 db:
   image: postgres
-  volumes:
-   - ./db_data:/var/lib/postgresql/data
   environment:
     POSTGRES_PASSWORD: Passw0rd
-    POSTGRES_DB: conflab
+    POSTGRES_DB: conflab-test
