@@ -6,6 +6,8 @@ web:
    - 8080:8080
   links:
    - db
+  environment:
+   POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 db:
   image: postgres
   volumes:
