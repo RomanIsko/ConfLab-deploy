@@ -5,4 +5,4 @@ RUN mkdir /app
 WORKDIR app
 
 EXPOSE 8080
-ENTRYPOINT java -jar "$(ls *.jar)" application.properties
+ENTRYPOINT sleep 3 && java -jar "$(ls *.jar)" application.properties
