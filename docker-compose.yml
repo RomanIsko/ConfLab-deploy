@@ -1,5 +1,5 @@
 web:
-  build: .
+  image: lwieske/java-8
   volumes:
    - .:/app
   ports:
