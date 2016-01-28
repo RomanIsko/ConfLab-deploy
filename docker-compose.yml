@@ -1,5 +1,5 @@
 web:
-  build: .
+  image: lwieske/java-8
   volumes:
    - .:/app
   ports:
@@ -8,6 +8,7 @@ web:
    - db
   environment:
    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+  entrypoint: /app/start.sh
 db:
   image: postgres
   volumes:
