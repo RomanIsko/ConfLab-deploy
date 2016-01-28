@@ -6,6 +6,7 @@ web:
    - 8888:8080
   links:
    - db
+  entrypoint: /app/start.sh
 db:
   image: postgres
   environment:
